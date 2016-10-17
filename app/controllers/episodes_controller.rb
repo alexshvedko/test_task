@@ -36,7 +36,7 @@ class EpisodesController < ApplicationController
   end
 
   def delete_dislike
-    @episode.check_likes(@current_user.id)
+    @episode.check_dislikes(@current_user.id)
     render_success(@episode, :accepted, serializer: LikeSerializer)
   end
 
